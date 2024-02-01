@@ -32,7 +32,7 @@ BuildRequires:	rpm-pythonprov
 %endif
 %if %{with kernel}
 %{expand:%buildrequires_kernel kernel%%{_alt_kernel}-module-build >= 3:4.15}
-%{expand:%buildrequires_kernel kernel%%{_alt_kernel}-module-build < 3:5.6}
+%{expand:%buildrequires_kernel kernel%%{_alt_kernel}-module-build < 3:6.6}
 BuildRequires:	rpmbuild(macros) >= 1.701
 %endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
