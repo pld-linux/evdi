@@ -164,6 +164,7 @@ libdir=%{_libdir}
 includedir=%{_includedir}
 
 Name: evdi
+Description: Extensible Virtual Display Interface library
 Version: %{version}
 Libs: -L${libdir} -levdi
 Cflags: -I${includedir}
