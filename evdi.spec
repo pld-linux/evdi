@@ -12,7 +12,7 @@ Summary:	Extensible Virtual Display Interface library
 Summary(pl.UTF-8):	Biblioteka Extensible Virtual Display Interface
 Name:		evdi
 Version:	1.14.1
-%define	rel	2
+%define	rel	3
 Release:	%{rel}
 License:	LGPL v2.1 (library), GPL v2 (kernel module), MIT (the rest)
 Group:		Libraries
