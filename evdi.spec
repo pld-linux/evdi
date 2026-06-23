@@ -11,14 +11,14 @@
 Summary:	Extensible Virtual Display Interface library
 Summary(pl.UTF-8):	Biblioteka Extensible Virtual Display Interface
 Name:		evdi
-Version:	1.14.1
-%define	rel	3
+Version:	1.14.16
+%define	rel	1
 Release:	%{rel}
 License:	LGPL v2.1 (library), GPL v2 (kernel module), MIT (the rest)
 Group:		Libraries
 #Source0Download: https://github.com/DisplayLink/evdi/releases
 Source0:	https://github.com/DisplayLink/evdi/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	282107fc6b2bd75fdeaae2fa2c674eb1
+# Source0-md5:	cbfc15e9ab71bdda5130149f40799835
 URL:		https://github.com/DisplayLink/evdi
 %if %{with userspace}
 BuildRequires:	libdrm-devel
@@ -187,19 +187,19 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README.md
-%attr(755,root,root) %{_libdir}/libevdi.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libevdi.so.1
+%{_libdir}/libevdi.so.*.*.*
+%ghost %{_libdir}/libevdi.so.1
 
 %files devel
 %defattr(644,root,root,755)
 %doc docs/*.md
-%attr(755,root,root) %{_libdir}/libevdi.so
+%{_libdir}/libevdi.so
 %{_includedir}/evdi_lib.h
 %{_pkgconfigdir}/evdi.pc
 
 %if %{with python3}
 %files -n python3-pyevdi
 %defattr(644,root,root,755)
-%attr(755,root,root) %{py3_sitedir}/PyEvdi.cpython-*.so*
+%{py3_sitedir}/PyEvdi.cpython-*.so*
 %endif
 %endif
