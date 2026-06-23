@@ -12,7 +12,7 @@ Summary:	Extensible Virtual Display Interface library
 Summary(pl.UTF-8):	Biblioteka Extensible Virtual Display Interface
 Name:		evdi
 Version:	1.14.16
-%define	rel	1
+%define	rel	2
 Release:	%{rel}
 License:	LGPL v2.1 (library), GPL v2 (kernel module), MIT (the rest)
 Group:		Libraries
@@ -82,7 +82,7 @@ Python interface to evdi library.
 %description -n python3-pyevdi -l pl.UTF-8
 Interfejs Pythona do biblioteki evdi.
 
-%define	kernel_pkg()\
+%define	kernel_pkg() \
 %package -n kernel%{_alt_kernel}-drm-evdi\
 Summary:	Linux driver for Extensible Virtual Display Interface\
 Summary(pl.UTF-8):	Sterownik dla Linuksa do Extensible Virtual Display Interface\
@@ -112,7 +112,7 @@ Sterownik dla Linuksa do Extensible Virtual Display Interface.\
 %depmod %{_kernel_ver}\
 %{nil}
 
-%define build_kernel_pkg()\
+%define build_kernel_pkg() \
 %build_kernel_modules -m evdi\
 \
 %install_kernel_modules -D installed -m evdi -d kernel/drivers/gpu/drm/evdi\
